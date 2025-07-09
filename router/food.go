@@ -1,6 +1,10 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"golang-restaurant-management/controllers"
+
+	"github.com/gin-gonic/gin"
+)
 
 func Food(r *gin.Engine) {
 	r.GET("/foods", controllers.GetFoods())
