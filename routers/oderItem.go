@@ -1,6 +1,10 @@
-package routes
+package routers
 
-import "github.com/gin-gonic/gin"
+import (
+	"golang-restaurant-management/controllers"
+
+	"github.com/gin-gonic/gin"
+)
 
 func OrderItem(r *gin.Engine) {
 	r.GET("/orderItems", controllers.GetOrderItems())

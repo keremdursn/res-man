@@ -2,6 +2,8 @@ package main
 
 import (
 	"golang-restaurant-management/database"
+	"golang-restaurant-management/middleware"
+	"golang-restaurant-management/routers"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -19,15 +21,15 @@ func main() {
 
 	router := gin.New()
 	router.Use(gin.Logger())
-	router.User(router)
+	routers.User(router)
 	router.Use(middleware.Authentication())
 
-	router.Food(router)
-	router.Menu(router)
-	router.Table(router)
-	router.Order(router)
-	router.OrderItem(router)
-	router.Invoice(router)
+	routers.Food(router)
+	routers.Menu(router)
+	routers.Table(router)
+	routers.Order(router)
+	routers.OrderItem(router)
+	routers.Invoice(router)
 
 	router.Run(":" + port)
 

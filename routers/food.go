@@ -1,4 +1,4 @@
-package routes
+package routers
 
 import (
 	"golang-restaurant-management/controllers"
